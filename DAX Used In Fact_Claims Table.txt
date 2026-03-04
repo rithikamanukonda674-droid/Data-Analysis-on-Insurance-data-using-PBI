@@ -1,0 +1,6 @@
+DAX Used In Fact_Claims Table:
+
+
+Approved Claims = SUM(Fact_Claims[ApprovedAmount] )
+
+Total Claims = sum(Fact_Claims[ClaimAmount])

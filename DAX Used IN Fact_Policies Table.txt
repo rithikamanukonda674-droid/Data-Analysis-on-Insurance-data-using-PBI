@@ -1,0 +1,13 @@
+DAX Used IN Fact_Policies Table:
+
+
+
+Active Policies = CALCULATE(count(Fact_Policies[Status]) ,(fact_policies[status]="active"))
+
+lapse Rate % = DIVIDE([lapsed],[Total Policies],0)
+
+lapsed = calculate(count(Fact_Policies[Status]),Fact_Policies[Status]="Lapsed")
+
+Risc category = switch(true(),[Loss Ratio %]<0.7 , "Low",[Loss Ratio %]<=1,"Medium","High")
+
+Risc category_c = switch(true(),[Loss Ratio %]<0.7 , "Low",[Loss Ratio %]<=1,"Medium","High")

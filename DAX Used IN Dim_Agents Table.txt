@@ -1,0 +1,12 @@
+DAX Used IN Dim_Agents Table :
+
+
+High Risk % = DIVIDE([High risk Policies],[Total Policies],0)
+
+Agent Rank = Rankx(all(Dim_Agent[Agent Name]),[Total_premium],,DESC)
+
+High risk Policies = calculate(DISTINCTCOUNT(Fact_Claims[PolicyNumber]),Filter(Fact_Claims,[Approved Claims]>[Total_premium]))
+
+Loss Ratio % = DIVIDE([Total Claims],[Total_premium],0) 
+
+Total Policies = DISTINCTCOUNT(Fact_Claims[PolicyNumber])

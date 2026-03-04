@@ -1,0 +1,4 @@
+DAX Used In Fact_Premium Table:
+
+
+Total_premium = sum(Fact_Premiums[PremiumAmount] )
